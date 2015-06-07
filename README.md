@@ -1,4 +1,4 @@
-# mixpanel-export
+# mixpanel-export-java
 
 Export Mixpanel events from Java
 
@@ -9,7 +9,7 @@ Export Mixpanel events from Java
 
 ###Example
 
-See [ExamplesTest.java](https://github.com/cdimascio/mixpanel-export/blob/master/test/java/com/cmd/mixpanel/test/ExamplesTest.java)
+See [ExamplesTest.java](https://github.com/cdimascio/mixpanel-export-java/blob/master/test/java/com/cmd/mixpanel/test/ExamplesTest.java)
 
 ```java
 
