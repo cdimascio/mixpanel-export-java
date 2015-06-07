@@ -2,9 +2,14 @@
 
 Export Mixpanel events from Java
 
-###Usage
+###Build the jar with Maven
+   - `git clone` repo and `cd` to the project root
+   - `mvn install`  
+   _In typical Maven fashion, the jar is output to the `target` folder._
 
-See test/java/com.cmd/mixpanel/test/ExamplesTest
+###Example
+
+See [ExamplesTest.java](https://github.com/cdimascio/mixpanel-export/blob/master/test/java/com/cmd/mixpanel/test/ExamplesTest.java)
 
 ```java
 
