@@ -27,3 +27,6 @@ public class Example {
 }    
 ```
 
+###License
+The MIT License
+
