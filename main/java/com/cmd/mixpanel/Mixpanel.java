@@ -27,7 +27,7 @@ public class Mixpanel {
      * Returns the Mixpanel instance for the given api key and secret.
      * @param apiKey The Mixpanel API key
      * @param apiSecret The Mixpanel API Secret
-     * @return
+     * @return the Mixpanel instance for the given api key and secret.
      */
     public synchronized static Mixpanel getInstance(String apiKey, String apiSecret) {
         Mixpanel instance = instances.get(apiKey+apiSecret);
@@ -54,7 +54,7 @@ public class Mixpanel {
      * Export data from Mixpanel
      * @param from The date from which to begin querying from. This date is inclusive.
      * @param to The date from which to stop querying from. This date is inclusive.
-     * @return
+     * @return The response body as a list of JSONObjects
      * @throws MixpanelException
      */
     public List<JSONObject> export(LocalDate from, LocalDate to) throws MixpanelException {
@@ -73,6 +73,10 @@ public class Mixpanel {
                     get(apiEndpoint).
                     queryString(params).
                     asString();
+
+            if (res.getStatus() != 200) {
+                throw new MixpanelException(res.getStatus()+": "+res.getStatusText());
+            }
 
             return Util.jsonList(res.getBody());
         } catch (UnirestException e) {
