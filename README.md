@@ -2,12 +2,13 @@
 
 Export Mixpanel events from Java
 
-###Build the jar with Maven
+### Build the jar with Maven
+
    - `git clone` repo and `cd` to the project root
    - `mvn install`  
    _In typical Maven fashion, the jar is output to the `target` folder._
 
-###Example
+### Example
 
 See [ExamplesTest.java](https://github.com/cdimascio/mixpanel-export-java/blob/master/test/java/com/cmd/mixpanel/test/ExamplesTest.java)
 
@@ -27,6 +28,7 @@ public class Example {
 }    
 ```
 
-###License
+### License
+
 The MIT License
 
